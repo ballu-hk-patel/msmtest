@@ -38,7 +38,6 @@ django-phonenumber-field==5.0.0
 django-polymorphic==3.0.0
 django-random-image==0.2
 django-random-image-from-folder==0.0.3
-django-twilio==0.13.0.post1
 djangorestframework==3.12.2
 easy-thumbnails==2.7.1
 entrypoints==0.3
@@ -91,9 +90,7 @@ parso==0.7.1
 patsy==0.5.1
 phonenumbers==8.12.14
 pickleshare==0.7.5
-Pillow==7.2.0
 pipenv==2020.11.15
-playsound==1.2.2
 plotly==4.10.0
 prometheus-client==0.8.0
 prompt-toolkit==3.0.7
@@ -129,7 +126,6 @@ pywhatkit==2.4
 PyYAML==5.3.1
 pyzmq==19.0.2
 Quandl==3.5.2
-query-string==0.0.0
 regex==2020.6.8
 reportlab==3.5.66
 requests==2.24.0
