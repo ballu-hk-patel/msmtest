@@ -1,0 +1,20 @@
+<html>
+    {% load static %}
+<body>
+<h1> sucess</h1>
+{% for x,y,z,o in cart %}
+
+<h1>{{x}}</h1><h4>{{y}}</h4><b>{{z}}</b>
+<img src="{{o.image.url}}" height="100px" width="100px"></img>
+<td>
+    {% if s == "True" %}
+    <button type="button"  style="height: 35px;" >Completed</button>
+    
+    {% else %}
+    <button type="button" style="height: 35px;">Pendding..</button>
+    {% endif %}
+</td>
+
+{% endfor %}
+</body>
+</html>

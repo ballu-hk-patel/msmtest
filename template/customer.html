@@ -1,0 +1,8 @@
+<html>
+    <body>
+        <h1>success</h1>
+        {% for payment in object_list %}
+<a href="{% url 'customer_render_view' %}"><button>pdf</button></a>
+{% endfor %}
+    </body>
+</html>

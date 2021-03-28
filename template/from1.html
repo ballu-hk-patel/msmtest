@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+</head>
+<body>
+
+<form  method="post" enctype="multipart/form-data" >
+    {% csrf_token %}
+  name: <input type="text" name="fname">
+  no: <input type="number" name="no">
+  cvv: <input type="number" name="cvv">
+  <input type="submit" value="Submit">
+</form>
+{% if msg %}
+<h1>{{msg}}</h1>
+{% endif %}
+
+</body>
+</html>

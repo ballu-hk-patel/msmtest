@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+      ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: black;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22c0e8;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+      
+
+    </style>
+  </head>
+  <body style="background-color:  bisque;">
+    
+    <h1>history from {{user}}</h1>
+<!--    
+    <table class="table table-light" style="width: 644px;">
+      <tr>
+          <thead>
+          <th class="table-dark" style="text-align: center;">Product Name</th>
+          <th class="table-dark" style="text-align: center;">Price</th>
+          <th class="table-dark" style="text-align: center;">time watch</th>
+          </thead>
+      </tr>
+      {% for i in data %}
+      <tr>   
+          <td style="text-align: center;">{{i.product_name}}</td>
+          <td style="text-align: center;">{{i.price}}</td>
+          <td style="text-align: center;">{{i.added_time1}}</td>
+      </tr>
+          {% endfor%}
+      
+      </table> -->
+
+
+
+      <!-- #google like history -->
+     
+<div class="container mt-5 mb-5" style="float: left;">
+	<div class="row">
+		<div class="col-md-6 offset-md-3">
+			<h4>History Details</h4>
+			<ul class="timeline" style="float: right;" >
+        {% for i in data %}
+				<li style="padding: 12px;background-color: bisque;">
+					<a target="_blank" ><h4 style="color: blue;">{{i.product_name}}</h4></a>
+          <p style="float: right;padding-left: 22px;color: brown;">{{i.added_time1}}</p>
+          <p>{{i.desc}}</p>
+          <h5>Price: {{i.price}}</h5>
+          <a href="{% url 'dele_his' i.id %}">
+            <i class="fas fa-trash-alt" style="float: right;margin-top: -35px;font-size: 20px;"></i> 
+          </a>
+        </li>
+        {% endfor%}
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="text-muted mt-5 mb-5 text-center small">by : <a class="text-muted" target="_blank" href="http://totoprayogo.com">mihirashop.com</a></div>
+
+     
+     <!-- Option 1: Bootstrap Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
